@@ -1,0 +1,289 @@
+/* the navbar have a height of 10vh, so the components under need a heigth of 90vh to complete screen without scroll */
+/* NavBar(87); App(2); SignForm(6) */
+
+.navbar{
+    width: 100vw;
+    height: 10vh;          
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.navLinkLogo{
+    width: 8vh;
+    height: 8vh;
+}
+
+.navbarContent{
+    flex-grow: 3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userList{
+    z-index: 2;
+    position: absolute;
+    background-color: #fff;
+    top: 10vh;
+    width: 100vw;
+    padding: 2vh 2vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 0 0 5px 5px;
+}
+
+.userList li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userList li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.6em;
+}
+
+.linkToUser{
+    font-size: 1.2em;
+    color: #808080;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*Styles for the mobile nav*/
+
+.navMobile{
+    display: none;
+}
+
+.menuToggle{
+    display: none;
+}
+
+.menuButtonContainer {
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menuButton,
+.menuButton::before,
+.menuButton::after {
+  display: block;
+  background-color: #2f4f4f;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms ease-in;
+  border-radius: 2px;
+}
+
+.menuButton{
+    transition: background-color 600ms ease-in;
+}
+
+.menuButton::before {                      
+  content: "";
+  margin-top: -8px;
+}
+.menuButton::after {
+  content: "";
+  margin-top: 8px;
+}
+
+.menuToggle:checked + label div::before {        
+    margin-top: 0px;
+    transform: rotate(405deg);
+} 
+.menuToggle:checked + label div {           
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0ms ;
+} 
+.menuToggle:checked + label div::after {     
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+.menuToggle:checked ~ div{
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: #fff;
+    padding: 0.8em;
+    height: 25vh;
+    /* min-height: 196px; */
+    animation:  .2s linear arrive;
+}
+
+@keyframes arrive {
+    from{
+        height: 0vh;
+    }
+    to{
+        height: 25vh;
+    }   
+}
+
+.popNavMobile{
+    display: none;
+    height: 0vh;
+}
+
+.popNavMobile div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation:  .2s linear arrive;
+}
+
+.popNavMobile div input{
+    color: #808080;
+}
+
+.searchInput + ul{
+    width: 190px;
+    padding: 0.8em;
+    box-shadow: 0 0 0 .15vw rgba(127, 146, 160, 0.2);
+}
+
+.searchInput + ul li{
+    list-style: none;
+    color: #808080;
+}
+
+.navMobileListItem{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.navMobileListItem li{
+    list-style: none;
+    white-space: nowrap;
+}
+
+.navMobileListItem li > a{
+    text-decoration: none;
+    color: #808080;
+    padding: 0 0.4em;
+}
+
+/*styles for the Desktop nav */
+
+.navDesktop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navDesktop li{
+    list-style: none;
+    margin: 0 8px;
+}
+
+.navDesktop ul li:nth-child(1){
+    margin-right: 2em;
+}
+
+.navDesktop li > *{
+    text-decoration: none;
+    color: #808080;
+}
+
+/*styles for the input search bar*/
+
+.searchInput {
+    font-family: 'Prompt', sans-serif;
+    background-color: inherit;
+    box-shadow: 0 0 0 .15vw rgba(127, 146, 160, 0.2);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 0.4em;
+    max-width: 190px;
+    transition: .4s;
+}
+
+.searchInput::placeholder{
+    font-family: 'Prompt', sans-serif;
+}
+
+.searchInput:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 206, 235, 0.2);
+}
+  
+.searchInput:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
+
+
+
+@media screen and (max-width: 768px){
+    
+    .navMobile{
+        display: block;
+        margin-right: 3.2em
+    }
+
+    .navDesktop{
+        display: none;
+    }
+
+    .listDesktop{
+        display: none !important;
+    }
+
+    /* .userList{
+        position: relative;
+        background-color: #fff;
+        top: 0;
+        padding: 2vh 2vw;
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .searchInput{
+        width: 90%;
+        max-width: none;
+        border-radius: 8px 8px 0 0 ;
+    }
+
+    .searchInput ~ ul{
+        position: relative;
+        background-color: #fff;
+        top: 0;
+        padding: 2vh 0;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-height: 112px;
+        overflow: scroll;
+    }
+
+    .searchInput ~ ul li{
+        padding: 0.4em 0;
+    }
+
+    .searchInput ~ ul li:not(:last-child){
+        border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+    }
+
+}

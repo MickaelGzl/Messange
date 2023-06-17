@@ -1,0 +1,12 @@
+.logoNav{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+}
+
+.logoForm{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    margin-bottom: 3vh;
+}

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Prompt', sans-serif;
+  background-color: #f0f0f0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*
+@media screen and (max-width: 768px){
+  body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 388px){
+  body{
+    overflow: scroll;
+  }
+}*/

@@ -1,0 +1,105 @@
+.message{
+    width:96%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #808080;
+    border-radius: 30px;
+    color: #808080;
+    margin-bottom: 2em;
+    background-color: #f0f0f0;;
+}
+
+.infoMessage{
+    padding: 1em;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #808080;
+}
+
+.infoMessage > div:nth-child(1){
+    cursor: pointer;
+}
+
+.infoMessage > div{
+    display: flex;
+    align-items: center;
+}
+
+.infoMessage > div img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.infoMessage > div span{
+    font-size: 1.2em;
+    margin-left: 0.4em;
+}
+
+.edition{
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editionAuthor{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1vh;
+    font-size: 1.4em;
+}
+
+
+.content{
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2em;
+}
+
+.content img{
+    max-width: 90%;
+    height: auto;
+}
+
+.changeContentValue{
+    width: 90%;
+    color: #808080;
+    font-size: 1em;
+    font-family: 'Prompt', sans-serif;
+}
+
+.reactions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #808080;
+    padding: 0.6em 2em;
+}
+
+.reactions > div{
+    width: 128px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.changeImageValue button{
+    width: 30vw;
+    max-width: 150px;
+    background-color: skyblue;
+    border: 1px solid #24a4d8;
+    margin-top: 1vh;
+    height: 3vh;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.6em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+}

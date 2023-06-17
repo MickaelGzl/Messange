@@ -1,0 +1,9 @@
+.scroll{
+    overflow-y: scroll !important;
+    max-height: 90vh;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}

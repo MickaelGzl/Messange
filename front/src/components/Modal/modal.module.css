@@ -1,0 +1,134 @@
+.hideOnTop{
+    z-index: 100;
+    position: absolute;
+    top:-100vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    width: 50%;
+    min-width: 384px;
+    padding: 4vh;
+    background-color: #fff;
+    color: #808080;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: top 0.4s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.modal{
+    top: 20vh;
+    transition: top 0.4s ease-out;
+}
+
+.modal ~ nav{               /* blur the nav and the div, the background of the modal*/
+    filter: blur(5px);
+}
+.modal ~ div{
+    filter: blur(5px);
+}
+
+.hideOnTop img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
+
+.hideOnTop div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hideOnTop div p{
+    margin: 3vh 0;
+}
+
+.hideOnTop div button {
+    position: relative;
+    background-color: skyblue;
+    width: 11rem;
+    height: 6vh;
+    max-width: 250px;
+    padding: 0 2em;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+    cursor: pointer;
+    margin: 1vh 0;
+}
+
+.usernameInput{
+    width: 60%;
+    padding: 0 2em;
+    position: relative;
+}
+
+.usernameInput input {
+    border: 1px solid #808080;
+    border-radius: 30px;
+    width: 100%;
+    padding: 1vh;
+    color: #808080;
+    font-size: 1em;
+    background-color: inherit;
+    margin: 1vh 0;
+}
+
+.usernameInput span{
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 1.6em;
+   color: #808080;
+   cursor: pointer;
+}
+
+.hideOnTop div span small{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #ababab;
+    cursor: pointer;
+}
+
+/* the modal when we change username */
+
+.usernameInputChange{
+    width: 80%;
+    padding: 0 2em;
+    position: relative;
+}
+
+.usernameInputChange input {
+    border: 1px solid #808080;
+    border-radius: 30px;
+    width: 100%;
+    padding: 1vh;
+    color: #808080;
+    font-size: 1em;
+    background-color: inherit;
+    margin: 1vh 0;
+}
+
+.usernameInputChange span{
+   position: absolute;
+   right: 0;
+   top: 70%;
+   transform: translateY(-50%);
+   font-size: 1.6em;
+   color: #808080;
+   cursor: pointer;
+}
+
+.errorMessage{
+    font-size: 0.8em;
+    color: #ff0636;
+}

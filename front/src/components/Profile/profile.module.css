@@ -1,0 +1,130 @@
+.profile {
+    z-index: 1;
+    position: relative;
+    max-width: 384px;
+    border-radius: 30px;
+    border: 1px solid #808080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    background-color: #f0f0f0;
+    height: 72vh;
+}
+
+.maskProfile {
+    z-index: 1;
+    position: relative;
+    max-width: 384px;
+    border-radius: 30px;
+    border: 1px solid #808080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    transform: translateX(-120%);
+    transition: transform 0.6s ease-in;
+}
+
+.avatarInput {
+    display: none;
+}
+
+.avatarInput~img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.pseudo {
+    color: #808080;
+    font-size: 1.6em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.pseudo>span {
+    font-size: 0.6em;
+}
+
+.userDescription {
+    padding: 1em;
+}
+
+.info {
+    padding: 1em;
+    width: 100%;
+    height: 30%;
+    min-width: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.info div {
+    width: 8em;
+    font-size: 1.1em;
+}
+
+.createdAt {
+    position: absolute;
+    bottom: 1vh;
+}
+
+.follow {
+    align-self: center;
+    width: 30vw;
+    max-width: 150px;
+    margin: 4vh 0;
+    height: 4vh;
+    min-height: 30px;
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.addTo{
+    background-color: skyblue;
+    border: 1px solid #24a4d8;
+}
+
+.removeOf{
+    background-color: #ffb7c5;
+    border: 1px solid #ff7892;
+}
+
+@media screen and (max-width: 896px) {
+    .info div {
+        font-size: 0.98em;
+    }
+
+    .createdAt {
+        margin-top: 2vh;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile {
+        position: absolute;
+        top: 10vh;
+        left: 4vw;
+        width: 50%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-out;
+    }
+
+    .maskProfile {
+        position: absolute;
+        top: 10vh;
+        left: 4vw;
+        width: 50%;
+    }
+}

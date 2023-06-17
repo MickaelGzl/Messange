@@ -1,0 +1,28 @@
+.toast{
+    z-index: 100;
+    position: absolute;
+    margin-top: 75vh;
+    background-color: #ffb7c5;  
+    padding: 0.8em;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -30em;
+    max-width: 30vh;
+    bottom: 6vh;
+    animation: 2.6s linear both running imHiding; 
+}
+
+@keyframes imHiding {
+    0% { rigth: -30em; }
+    8% { right: 2em; }
+    92% {right: 2em; }
+    100% {right: -30em; }
+}
+
+.toast > div{
+    font-size: 0.8em;
+}
+
+

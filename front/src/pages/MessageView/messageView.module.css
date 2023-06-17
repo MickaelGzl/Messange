@@ -1,0 +1,141 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 90vh;
+    background-image: linear-gradient(220deg,
+            hsl(0deg 0% 100%) 0%,
+            hsl(200deg 66% 96%) 0%,
+            hsl(200deg 67% 92%) 1%,
+            hsl(200deg 68% 88%) 3%,
+            hsl(199deg 69% 83%) 5%,
+            hsl(198deg 70% 78%) 8%,
+            hsl(197deg 71% 73%) 11%,
+            hsl(198deg 71% 70%) 16%,
+            hsl(198deg 70% 68%) 21%,
+            hsl(198deg 70% 65%) 27%,
+            hsl(198deg 70% 62%) 34%,
+            hsl(198deg 70% 58%) 41%,
+            hsl(197deg 71% 54%) 49%,
+            hsl(197deg 71% 53%) 57%,
+            hsl(197deg 70% 53%) 64%,
+            hsl(197deg 70% 52%) 72%,
+            hsl(197deg 70% 51%) 78%,
+            hsl(197deg 70% 50%) 83%,
+            hsl(197deg 71% 49%) 88%,
+            hsl(197deg 71% 46%) 92%,
+            hsl(197deg 71% 43%) 95%,
+            hsl(197deg 72% 39%) 97%,
+            hsl(197deg 72% 34%) 99%,
+            hsl(197deg 72% 30%) 100%,
+            hsl(197deg 72% 24%) 100%);
+}
+
+.container > div{
+    width: 100vw;
+    height: 80vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+}
+
+.commentaries {
+    width: 80vw;
+    padding: 0 4vh
+}
+
+.addComment {
+    background-color: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.4em 1em;
+
+}
+
+.addComment > textarea{
+    resize: none;
+    width: 80vw;
+    height: 6vh;
+    font-family: 'Prompt', sans-serif;
+    color: #808080;
+    border: none;
+    border-radius: 10px;
+    padding: 0.2em 0.4em;
+}
+
+.addComment > textarea:focus{
+    outline: none;
+    border: 2px solid #808080;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.buttonWrapper {
+    padding: 0.2em;
+    border-radius: 30px;
+    position: relative;
+}
+
+.buttonWrapper::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(315deg,
+            hsl(348deg 100% 86%) 0%,
+            hsl(338deg 56% 83%) 7%,
+            hsl(306deg 22% 80%) 13%,
+            hsl(230deg 29% 81%) 20%,
+            hsl(206deg 53% 77%) 27%,
+            hsl(197deg 71% 73%) 33%,
+            hsl(199deg 67% 73%) 40%,
+            hsl(202deg 62% 74%) 47%,
+            hsl(205deg 58% 74%) 53%,
+            hsl(208deg 53% 75%) 60%,
+            hsl(213deg 48% 75%) 67%,
+            hsl(214deg 46% 81%) 73%,
+            hsl(214deg 45% 86%) 80%,
+            hsl(215deg 44% 91%) 87%,
+            hsl(215deg 43% 96%) 93%,
+            hsl(0deg 0% 100%) 100%);
+}
+
+.btn {
+    position: relative;
+    background-color: #fff;
+    width: 10vw;
+    min-width: 96px;
+    height: 6vh;
+    max-width: 256px;
+    border-radius: 30px;
+    border: none;
+    color: #ff3f64;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(1.5);
+}
+
+/* @media screen and (max-width: 1024px){
+    .btn{
+      width
+    }
+} */

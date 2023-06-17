@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100vw;
+  height: 90vh;
+  /*cause navbar is 9vh, take the last part of the screen*/
+}
+
+.form {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  min-width: 234px;
+}
+
+.form div label{            /* style the label, when no text or no focus on input */
+  position: absolute;
+  top: -16px;
+  left: 0;
+  color: #2199ca;
+  opacity: 75%;
+  font-size: 0.8em;
+  transition: .2s;
+}
+
+.form div input:placeholder-shown ~ label {     /* little trick because :valid is not good for input type mail, so at start we place the label on the input*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1em;
+  color: #2199ca;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.form div input:focus ~ label{  /*if input is focus or have text, label will not replace itself on the input */
+  position: absolute;
+  top: -16px;
+  left: 0;
+  color: #2199ca;
+  opacity: 75%;
+  font-size: 0.8em;
+  transition: .2s;
+}
+
+.form div:not(:last-child) {
+  width: 90%;
+  position: relative;
+}
+
+.form div input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid skyblue;
+  width: 90%;
+  padding: 2vh 0 1vh;
+  color: #808080;
+  font-size: 1em;
+  background-color: inherit;
+}
+
+/*design a gradient border for our button*/
+
+.buttonWrapper {
+  margin-top: 3vh;
+  padding: 0.2em;
+  border-radius: 30px;
+  position: relative;
+}
+
+.buttonWrapper::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(315deg,
+          hsl(348deg 100% 86%) 0%,
+          hsl(338deg 56% 83%) 7%,
+          hsl(306deg 22% 80%) 13%,
+          hsl(230deg 29% 81%) 20%,
+          hsl(206deg 53% 77%) 27%,
+          hsl(197deg 71% 73%) 33%,
+          hsl(199deg 67% 73%) 40%,
+          hsl(202deg 62% 74%) 47%,
+          hsl(205deg 58% 74%) 53%,
+          hsl(208deg 53% 75%) 60%,
+          hsl(213deg 48% 75%) 67%,
+          hsl(214deg 46% 81%) 73%,
+          hsl(214deg 45% 86%) 80%,
+          hsl(215deg 44% 91%) 87%,
+          hsl(215deg 43% 96%) 93%,
+          hsl(0deg 0% 100%) 100%);
+}
+
+.btn {
+  position: relative;
+  background-color: #fff;
+  width: 11rem;
+  height: 6vh;
+  max-width: 250px;
+  padding: 0 2em;
+  border-radius: 30px;
+  border: none;
+  color: #ff3f64;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+}
+
+.form~small {
+  margin-top: 2vh;
+}
+
+.redirectSignIn {
+  color: #808080;
+  text-underline-offset: 4px;
+}
+
+.errorMessage{
+  font-size: 0.8em;
+  color: #d40029;
+  margin: 0 0 5vh;
+}
+
+.visibilityBtn{
+  position: absolute;
+  border: none;
+  top: 1.5vh;       /*same as padding top for input, -0.5vh to center*/
+  right: 4vh;
+}
+
+.material-symbols-outlined{
+  font-size: 5em;
+}
